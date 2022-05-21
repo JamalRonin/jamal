@@ -4,15 +4,15 @@
 			<section
 				id="about" class="about">
 
-{% include "home/aboutMe.html.twig" %}
+{% include "home/aboutMe.html.twig" with {'about':about} %}
 
-{% include "home/counts.html.twig" %}
+{% include "home/counts.html.twig" with {'infoNumber':infoNumber} %}
 
-{% include "home/skills.html.twig" %}
+{% include "home/skills.html.twig" with {'skills':skills} %}
 
-{% include "home/interests.html.twig" %}
+{% include "home/interests.html.twig" with {'interests':interests} %}
 
-{% include "home/testimonials.html.twig" %}
+{% include "home/testimonials.html.twig" with {'team':team} %}
 
 
 

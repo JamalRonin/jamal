@@ -10,7 +10,7 @@
 		{% include "home/_header.html.twig" %}
 
 
-		{% include "home/_about.html.twig" %}
+		{% include "home/_about.html.twig" with {'about': about, 'infoNumber': infoNumber, 'interests': interests, 'nav': nav, 'team': team, 'skills':skills} %}
 
 
 	{% endblock %}
