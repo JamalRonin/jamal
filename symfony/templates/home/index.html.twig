@@ -1,15 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Web-artisanat{% endblock %}
+{% block title %}Web-artisanat
+{% endblock %}
 
-{% block body_id 'home' %}
+{% block body %}
 
-{% block main %}
+	{% block main %}
 
-
-
-
+		{% include "home/_header.html.twig" %}
 
 
+		{% include "home/_about.html.twig" %}
+
+
+	{% endblock %}
 {% endblock %}
 
