@@ -10,27 +10,17 @@
 					<h2>I'm a passionate
 						<span>graphic designer</span>
 						from New York</h2>
-
+<pre>
+	{{ dump(nav) }}
+</pre>
 					<nav id="navbar" class="navbar">
 						<ul>
+
+						{% for nav_item in nav %}
 							<li>
-								<a class="nav-link active" href="#header">Home</a>
+								<a class="nav-link {{nav_item.classCss}}" href="{{nav_item.link}}">{{nav_item.name|capitalize}}</a>
 							</li>
-							<li>
-								<a class="nav-link" href="#about">About</a>
-							</li>
-							<li>
-								<a class="nav-link" href="#resume">Resume</a>
-							</li>
-							<li>
-								<a class="nav-link" href="#services">Services</a>
-							</li>
-							<li>
-								<a class="nav-link" href="#portfolio">Portfolio</a>
-							</li>
-							<li>
-								<a class="nav-link" href="#contact">Contact</a>
-							</li>
+						{% endfor %}
 						</ul>
 						<i class="bi bi-list mobile-nav-toggle"></i>
 					</nav>
