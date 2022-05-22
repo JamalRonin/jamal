@@ -28,8 +28,8 @@ class HomeController extends AbstractController
         $nav = $navRepository->findAll();
         $social = $socialLinkRepository->findAll();
         $team = $teamRepository->findAll();
-        $skills = $skillsRepository->findAll();
-
+        $skills = $skillsRepository->findByskills5to9();
+        $skills_section = $skillsRepository->findByskillsto14();
 
         return $this->render('home/index.html.twig', [
             'about' => $about,
@@ -39,6 +39,7 @@ class HomeController extends AbstractController
             'social' => $social,
             'team' => $team,
             'skills' => $skills,
+            'skills_section' => $skills_section,
         ]);
     }
 }

@@ -39,20 +39,28 @@ class SkillsRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Skills[] Returns an array of Skills objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('s')
-//            ->andWhere('s.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('s.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+   /**
+    * @return Skills[] Returns an array of Skills objects
+    */
+   public function findByskills5to9(): array
+   {
+       return $this->createQueryBuilder('s')
+           ->andWhere('s.id <= 9')
+           ->orderBy('s.id', 'ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+   public function findByskillsto14(): array
+   {
+       return $this->createQueryBuilder('s')
+           ->andWhere('s.id > 9')
+           ->orderBy('s.id', 'ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 
 //    public function findOneBySomeField($value): ?Skills
 //    {

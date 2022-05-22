@@ -1,46 +1,43 @@
-			<!-- ======= Header ======= -->
-			<header id="header">
-				<div class="container">
+<!-- ======= Header ======= -->
+<header id="header">
+	<div class="container">
 
-					<h1>
-						<a href="index.html">Emily Jones</a>
-					</h1>
-					<!-- Uncomment below if you prefer to use an image logo -->
-					<!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-					<h2>I'm a passionate
-						<span>graphic designer</span>
-						from New York</h2>
-<pre>
-	{{ dump(nav) }}
-</pre>
-					<nav id="navbar" class="navbar">
-						<ul>
+		<h1>
+			<a href="index.html">Emily Jones</a>
+		</h1>
+		<!-- Uncomment below if you prefer to use an image logo -->
+		<!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+		<h2>I'm a passionate
+			<span>graphic designer</span>
+			from New York</h2>
+		<nav id="navbar" class="navbar">
+			<ul>
 
-						{% for nav_item in nav %}
-							<li>
-								<a class="nav-link {{nav_item.classCss}}" href="{{nav_item.link}}">{{nav_item.name|capitalize}}</a>
-							</li>
-						{% endfor %}
-						</ul>
-						<i class="bi bi-list mobile-nav-toggle"></i>
-					</nav>
-					<!-- .navbar -->
+				{% for nav_item in nav %}
+					<li>
+						<a class="nav-link {{nav_item.classCss}}" href="{{nav_item.link}}">{{nav_item.name|capitalize}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav>
+		<!-- .navbar -->
 
-					<div class="social-links">
-						<a href="#" class="twitter">
-							<i class="bi bi-twitter"></i>
-						</a>
-						<a href="#" class="facebook">
-							<i class="bi bi-facebook"></i>
-						</a>
-						<a href="#" class="instagram">
-							<i class="bi bi-instagram"></i>
-						</a>
-						<a href="#" class="linkedin">
-							<i class="bi bi-linkedin"></i>
-						</a>
-					</div>
+		<div class="social-links">
+			<a href="#" class="twitter">
+				<i class="bi bi-twitter"></i>
+			</a>
+			<a href="#" class="facebook">
+				<i class="bi bi-facebook"></i>
+			</a>
+			<a href="#" class="instagram">
+				<i class="bi bi-instagram"></i>
+			</a>
+			<a href="#" class="linkedin">
+				<i class="bi bi-linkedin"></i>
+			</a>
+		</div>
 
-				</div>
-			</header>
-			<!-- End Header -->
+	</div>
+</header>
+<!-- End Header -->

@@ -6,9 +6,9 @@
 
 {% include "home/aboutMe.html.twig" with {'about':about} %}
 
-{% include "home/counts.html.twig" with {'infoNumber':infoNumber} %}
+{# {% include "home/counts.html.twig" with {'infoNumber':infoNumber} %} #}
 
-{% include "home/skills.html.twig" with {'skills':skills} %}
+{% include "home/skills.html.twig" with {'skills':skills, 'skills_section':skills_section} %}
 
 {% include "home/interests.html.twig" with {'interests':interests} %}
 
