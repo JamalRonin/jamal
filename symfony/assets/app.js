@@ -12,7 +12,7 @@ import  './styles/boxicons/css/boxicons.min.css';
 import './styles/glightbox/glightbox.min.css';
 import './styles/remixicon/remixicon.css';
 import './styles/swiper-bundle.min.css';
-import bg from './img/bg.jpg';
+// import bg from './img/bgJamal.jpg';
 import './styles/style.css';
 
 

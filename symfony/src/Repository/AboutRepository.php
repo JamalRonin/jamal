@@ -50,7 +50,7 @@ class AboutRepository extends ServiceEntityRepository
            ->orderBy('a.id', 'ASC')
            //->setMaxResults(10)
            ->getQuery()
-           ->getResult()
+           ->getArrayResult()
        ;
    }
 

@@ -7,8 +7,22 @@
 	</div>
 
 	<div class="row">
+	{# <pre>
+		{{ dump(about) }}
+	</pre>
+
+	{% for item in about %}
+{% for key, i in item %}
+
+{{key}}: {{i}}
+	<pre>
+		{{ dump(i) }}
+	</pre>
+{% endfor %}
+	{% endfor %} #}
+
 		<div class="col-lg-4" data-aos="fade-right">
-			<img src="assets/img/me.jpg" class="img-fluid" alt="">
+			<img src="{{asset ('img/avatar.png')}}" class="img-fluid" alt="">
 		</div>
 		<div
 			class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">

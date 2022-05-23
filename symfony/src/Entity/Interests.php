@@ -27,6 +27,16 @@ class Interests
      */
     private $linkIcon;
 
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $class;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $styleColor;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +62,30 @@ class Interests
     public function setLinkIcon(?string $linkIcon): self
     {
         $this->linkIcon = $linkIcon;
+
+        return $this;
+    }
+
+    public function getClass(): ?string
+    {
+        return $this->class;
+    }
+
+    public function setClass(?string $class): self
+    {
+        $this->class = $class;
+
+        return $this;
+    }
+
+    public function getStyleColor(): ?string
+    {
+        return $this->styleColor;
+    }
+
+    public function setStyleColor(?string $styleColor): self
+    {
+        $this->styleColor = $styleColor;
 
         return $this;
     }
