@@ -30,6 +30,7 @@ class HomeController extends AbstractController
         $team = $teamRepository->findAll();
         $skills = $skillsRepository->findByskills5to9();
         $skills_section = $skillsRepository->findByskillsto14();
+        
         dump($about);
 
         return $this->render('home/index.html.twig', [

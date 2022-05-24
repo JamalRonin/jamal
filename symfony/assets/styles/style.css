@@ -57,6 +57,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   z-index: 997;
   overflow-y: auto;
+  background-color: #00000099;
+
 }
 #header * {
   transition: ease-in-out 0.3s;
