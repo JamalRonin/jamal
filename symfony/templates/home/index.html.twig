@@ -9,7 +9,7 @@
 
 		{% include "home/_header.html.twig" with {'nav': nav, 'social': social} %}
 		{% include "home/_about.html.twig" with {'about': about, 'infoNumber': infoNumber, 'interests': interests, 'team': team, 'skills':skills, 'skills_section' : skills_section } %}
-		{% include "home/_resume.html.twig" %}
+		{% include "home/_resume.html.twig" with {'cv' : cv } %}
 
 	{% endblock %}
 {% endblock %}

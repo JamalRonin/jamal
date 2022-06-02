@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Experience;
 use App\Entity\Cv;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -39,20 +40,24 @@ class CvRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Cv[] Returns an array of Cv objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('c.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+   /**
+    * @return Cv[] Returns an array of Cv objects
+    */
+   public function findByCV(): array
+   {
+      
+    $entityManager = $this->getEntityManager();
+
+    $query = $entityManager->createQuery(
+        'SELECT c, e, d
+        FROM App\Entity\Cv c
+        INNER JOIN c.experience e
+        INNER JOIN e.description d'
+
+        );
+
+    return $query->getArrayResult();
+   }
 
 //    public function findOneBySomeField($value): ?Cv
 //    {
