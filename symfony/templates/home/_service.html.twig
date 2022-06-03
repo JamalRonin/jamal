@@ -11,13 +11,13 @@
 			{% for item in services %}
 
 
-				<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+				<div class="col-lg-4 col-md-6 mb-2 d-flex align-items-stretch">
 					<div class="icon-box">
 						<div class="icon">
 							<i class="{{item.class}}"></i>
 						</div>
 						<h4>
-							<a href="">{{item.denomination}}</a>
+							<a href="">{{item.denomination|capitalize}}</a>
 						</h4>
 						<p>{{item.description}}</p>
 					</div>
