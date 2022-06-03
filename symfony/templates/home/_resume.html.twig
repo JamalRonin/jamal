@@ -9,22 +9,22 @@
 
 		<div class="row">
 			<div class="col-lg-6">
-				<h3 class="resume-title">{{cv.2.titre_section}}</h3>
+				<h3 class="resume-title">{{cv.2.titre_section|capitalize}}</h3>
 				<div class="resume-item pb-0">
 					<h4>{{cv.2.experience.0.titre_experience}}</h4>
 					<p>
 						<em>{{cv.2.experience.0.description.0.experience_une}}</em>
 					</p>
-					<p>
+					{# <p>
 						<ul>
 							<li>{{cv.2.experience.0.description.0.experience_une}}</li>
 							<li>{{cv.2.experience.0.description.0.experience_deux}}</li>
 							<li>{{cv.2.experience.0.description.0.experience_trois}}</li>
 						</ul>
-					</p>
+					</p> #}
 				</div>
 
-				<h3 class="resume-title">{{cv.0.titre_section}}</h3>
+				<h3 class="resume-title">{{cv.0.titre_section|capitalize}}</h3>
 				<div class="resume-item">
 					<h4>{{cv.0.experience.0.titre_experience}}</h4>
 					<h5>{{cv.0.experience.0.aannee}}</h5>
@@ -51,7 +51,7 @@
 			</div>
 			<div class="col-lg-6">
       {# section pro #}
-				<h3 class="resume-title">{{cv.1.titre_section}}</h3>
+				<h3 class="resume-title">{{cv.1.titre_section|capitalize}}</h3>
 				<div class="resume-item">
 					<h4>{{cv.1.experience.0.titre_experience}}</h4>
 					<h5>{{cv.1.experience.0.aannee}}</h5>
