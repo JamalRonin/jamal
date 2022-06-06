@@ -9,6 +9,7 @@ use App\Repository\CvRepository;
 use App\Repository\InfoNumberRepository;
 use App\Repository\InterestsRepository;
 use App\Repository\NavRepository;
+use App\Repository\PortfolioRepository;
 use App\Repository\ServicesRepository;
 use App\Repository\SkillsRepository;
 use App\Repository\SocialLinkRepository;
@@ -22,7 +23,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="app_home")
      */
-    public function index(ServicesRepository $servicesRepositoy , CvRepository $cvRepository, SkillsRepository $skillsRepository,AboutRepository $aboutRepository, InfoNumberRepository $infoNumberRepository, InterestsRepository $interestsRepository, NavRepository $navRepository, SocialLinkRepository $socialLinkRepository, TeamRepository $teamRepository): Response
+    public function index(PortfolioRepository $portfolioRepository ,ServicesRepository $servicesRepositoy , CvRepository $cvRepository, SkillsRepository $skillsRepository,AboutRepository $aboutRepository, InfoNumberRepository $infoNumberRepository, InterestsRepository $interestsRepository, NavRepository $navRepository, SocialLinkRepository $socialLinkRepository, TeamRepository $teamRepository): Response
     {   
         $about = $aboutRepository->findByExampleField('1');
         $infoNumber = $infoNumberRepository->findAll();
@@ -34,7 +35,8 @@ class HomeController extends AbstractController
         $skills_section = $skillsRepository->findByskillsto14();
         $cv = $cvRepository->findByCV();
         $services = $servicesRepositoy->findAll();
-        dump($services);
+        $portfolio = $portfolioRepository->findAll();
+        dump($portfolio);
 
         return $this->render('home/index.html.twig', [
             'about' => $about,
@@ -47,6 +49,7 @@ class HomeController extends AbstractController
             'skills_section' => $skills_section,
             'cv' => $cv,
             'services' => $services,
+            'portfolio' => $portfolio,
         ]);
     }
 }
