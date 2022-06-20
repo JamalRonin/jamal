@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\InfoNumber;
 use App\Entity\Interests;
+use App\Form\ContactType;
 use App\Repository\AboutRepository;
 use App\Repository\CvRepository;
 use App\Repository\InfoNumberRepository;
@@ -25,6 +27,11 @@ class HomeController extends AbstractController
      */
     public function index(PortfolioRepository $portfolioRepository ,ServicesRepository $servicesRepositoy , CvRepository $cvRepository, SkillsRepository $skillsRepository,AboutRepository $aboutRepository, InfoNumberRepository $infoNumberRepository, InterestsRepository $interestsRepository, NavRepository $navRepository, SocialLinkRepository $socialLinkRepository, TeamRepository $teamRepository): Response
     {   
+
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact); 
+
+
         $about = $aboutRepository->findByExampleField('1');
         $infoNumber = $infoNumberRepository->findAll();
         $interests = $interestsRepository->findAll();
@@ -36,7 +43,7 @@ class HomeController extends AbstractController
         $cv = $cvRepository->findByCV();
         $services = $servicesRepositoy->findAll();
         $portfolio = $portfolioRepository->findAll();
-        dump($portfolio);
+        dump($form);
 
         return $this->render('home/index.html.twig', [
             'about' => $about,
@@ -50,6 +57,10 @@ class HomeController extends AbstractController
             'cv' => $cv,
             'services' => $services,
             'portfolio' => $portfolio,
+            'form' => $form,
         ]);
     }
+
+
+
 }
