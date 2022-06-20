@@ -12,20 +12,20 @@ class Contact{
      */
     private $nom;
 
-       /**
-     * @var string|null
-     * @Assert\NotBlanc()
-     * @Assert\Length(min=2, max=100)
-     */
-    private $prenom;
+    //    /**
+    //  * @var string|null
+    //  * @Assert\NotBlanc()
+    //  * @Assert\Length(min=2, max=100)
+    //  */
+    // private $prenom;
 
 
-       /**
-     * @var string|null
-     * @Assert\NotBlanc()
-     * @Assert\Regex(pattern="/[0-9]{10}/")
-     */
-    private $telephone;
+    //    /**
+    //  * @var string|null
+    //  * @Assert\NotBlanc()
+    //  * @Assert\Regex(pattern="/[0-9]{10}/")
+    //  */
+    // private $telephone;
 
 
            /**
@@ -68,53 +68,53 @@ class Contact{
         return $this;
     }
 
-    /**
-     * Get the value of prenom
-     *
-     * @return  string|null
-     */ 
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
+    // /**
+    //  * Get the value of prenom
+    //  *
+    //  * @return  string|null
+    //  */ 
+    // public function getPrenom()
+    // {
+    //     return $this->prenom;
+    // }
 
-    /**
-     * Set the value of prenom
-     *
-     * @param  string|null  $prenom
-     *
-     * @return  self
-     */ 
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
+    // /**
+    //  * Set the value of prenom
+    //  *
+    //  * @param  string|null  $prenom
+    //  *
+    //  * @return  self
+    //  */ 
+    // public function setPrenom($prenom)
+    // {
+    //     $this->prenom = $prenom;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    /**
-     * Get the value of telephone
-     *
-     * @return  string|null
-     */ 
-    public function getTelephone()
-    {
-        return $this->telephone;
-    }
+    // /**
+    //  * Get the value of telephone
+    //  *
+    //  * @return  string|null
+    //  */ 
+    // public function getTelephone()
+    // {
+    //     return $this->telephone;
+    // }
 
-    /**
-     * Set the value of telephone
-     *
-     * @param  string|null  $telephone
-     *
-     * @return  self
-     */ 
-    public function setTelephone($telephone)
-    {
-        $this->telephone = $telephone;
+    // /**
+    //  * Set the value of telephone
+    //  *
+    //  * @param  string|null  $telephone
+    //  *
+    //  * @return  self
+    //  */ 
+    // public function setTelephone($telephone)
+    // {
+    //     $this->telephone = $telephone;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     /**
      * Get the value of mail
