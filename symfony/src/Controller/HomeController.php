@@ -57,7 +57,7 @@ class HomeController extends AbstractController
             'cv' => $cv,
             'services' => $services,
             'portfolio' => $portfolio,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
