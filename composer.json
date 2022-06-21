@@ -2,6 +2,8 @@
     "require": {
         "symfony/validator": "^5.4",
         "doctrine/annotations": "^1.13",
-        "symfony/form": "^5.4"
+        "symfony/form": "^5.4",
+        "symfony/mailer": "^5.4",
+        "symfony/mime": "^5.4"
     }
 }

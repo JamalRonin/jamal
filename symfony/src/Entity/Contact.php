@@ -2,19 +2,19 @@
 namespace App\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert; 
-
+//use Symfony\Component\Validator\Constraints\NotBlank;
 class Contact{
 
     /**
      * @var string|null
-     * @Assert\NotBlanc()
+     * @Assert\NotBlank
      * @Assert\Length(min=2, max=100)
      */
     private $nom;
 
     //    /**
     //  * @var string|null
-    //  * @Assert\NotBlanc()
+    //  * @Assert\NotBlank()
     //  * @Assert\Length(min=2, max=100)
     //  */
     // private $prenom;
@@ -22,7 +22,7 @@ class Contact{
 
     //    /**
     //  * @var string|null
-    //  * @Assert\NotBlanc()
+    //  * @Assert\NotBlank()
     //  * @Assert\Regex(pattern="/[0-9]{10}/")
     //  */
     // private $telephone;
@@ -30,7 +30,7 @@ class Contact{
 
            /**
      * @var string|null
-     * @Assert\NotBlanc()
+     * @Assert\NotBlank()
      * @Assert\Email()
      */
     private $mail;
@@ -38,7 +38,7 @@ class Contact{
 
            /**
      * @var string|null
-     * @Assert\NotBlanc()
+     * @Assert\NotBlank()
      * @Assert\length(min=10)
      */
     private $message;

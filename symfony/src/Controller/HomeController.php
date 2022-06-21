@@ -6,6 +6,7 @@ use App\Entity\Contact;
 use App\Entity\InfoNumber;
 use App\Entity\Interests;
 use App\Form\ContactType;
+use App\Notification\ContactNotification;
 use App\Repository\AboutRepository;
 use App\Repository\CvRepository;
 use App\Repository\InfoNumberRepository;
@@ -17,6 +18,7 @@ use App\Repository\SkillsRepository;
 use App\Repository\SocialLinkRepository;
 use App\Repository\TeamRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 //COmmentaire, mettre les données en bdd pour le cv
@@ -25,12 +27,18 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="app_home")
      */
-    public function index(PortfolioRepository $portfolioRepository ,ServicesRepository $servicesRepositoy , CvRepository $cvRepository, SkillsRepository $skillsRepository,AboutRepository $aboutRepository, InfoNumberRepository $infoNumberRepository, InterestsRepository $interestsRepository, NavRepository $navRepository, SocialLinkRepository $socialLinkRepository, TeamRepository $teamRepository): Response
+    public function index( ContactNotification $contactNotification, Request $request, PortfolioRepository $portfolioRepository ,ServicesRepository $servicesRepositoy , CvRepository $cvRepository, SkillsRepository $skillsRepository,AboutRepository $aboutRepository, InfoNumberRepository $infoNumberRepository, InterestsRepository $interestsRepository, NavRepository $navRepository, SocialLinkRepository $socialLinkRepository, TeamRepository $teamRepository): Response
     {   
 
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact); 
+        $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()){
+            $contactNotification->notify($contact);
+            $this->addFlash('success', 'Votre mail est bien envoyé');
+            // return $this->redirectToRoute('app_home');
+        }
 
         $about = $aboutRepository->findByExampleField('1');
         $infoNumber = $infoNumberRepository->findAll();
