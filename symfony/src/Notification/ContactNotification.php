@@ -9,6 +9,7 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\Mime\Message;
 use Twig\Environment;
 use Symfony\Component\Mime\Part\AbstractPart;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
 class ContactNotification {
 
@@ -30,17 +31,18 @@ private $renderer;
     }
 
     public function notify(Contact $contact){
+        
 
-        $notif = (new Email())
+        $notif = (new TemplatedEmail())
             ->from($contact->getMail())
-            ->to ('jamalelk60@gmail.com')
+            ->to ('contact@web-artisanat.com')
             ->replyTo($contact->getMail())
-            ->setBody($this->renderer->render('mail/notif.html.twig',[
-                'contact' => $contact,
-
-            ]));
+            ->htmlTemplate('mail/notif.html.twig')
+            ->context(['contact'=>$contact]) ;
+        
 
         $this->mailer->send($notif);   
+        
 
 
     }
