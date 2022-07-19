@@ -42,7 +42,8 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             $contactNotification->notify($contact);
             $this->addFlash('success', 'Votre mail est bien envoyé');
-            // return $this->redirectToRoute('app_home');
+            // puis vider le formulaire
+             return $this->redirectToRoute('app_home');
         }
        
         $about = $aboutRepository->findByExampleField('1');
@@ -54,6 +55,7 @@ class HomeController extends AbstractController
         $skills = $skillsRepository->findByskills5to9();
         $skills_section = $skillsRepository->findByskillsto14();
         $cv = $cvRepository->findByCV();
+        dump($cv);
         $services = $servicesRepositoy->findAll();
         $portfolio = $portfolioRepository->findAll();
 
