@@ -1,33 +1,11 @@
 <!-- ======= Services Section ======= -->
 <section id="services" class="services">
 	<div class="container">
-
-		<div class="section-title">
-			<h2>Services Web</h2>
-			<p>Plus qu'un metier</p>
-		</div>
-
-		<div class="row">
-			{% for item in services %}
-
-
-				<div class="col-lg-4 col-md-6 mb-2 d-flex align-items-stretch">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="{{item.class}}"></i>
-						</div>
-						<h4>
-							<a href="">{{item.denomination|capitalize}}</a>
-						</h4>
-						<p>{{item.description}}</p>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
+	
 
 		<div class="section-title mt-1">
-			<h2>Services Web</h2>
-			<p>Plus qu'un metier</p>
+			<h2>Produits web</h2>
+			<p>Mes 3 services principaux</p>
 		</div>
 		<div class="row">
 			{% for item in produit %}
@@ -40,11 +18,11 @@
 						<h4>
 							<a href="">{{item.nom|capitalize}}</a>
 						</h4>
+						<h5>{{item.prix}}</h5>
 						<ul>
 						{# Si valeur est null alors ne pas afficher le li #}
 						
 							<li>{{item.description}}</li>
-							<li>{{item.prix}}</li>
 							{% if item.descriptionUne is empty %}
 							{% else %}
 							<li>{{item.descriptionUne}}</li>
@@ -84,6 +62,29 @@
 					</div>
 				</div>
 			 {% endfor %}
+		</div>
+
+		<div class="section-title">
+			<h2>Services Web</h2>
+			<p>Plus qu'un metier</p>
+		</div>
+
+		<div class="row">
+			{% for item in services %}
+
+
+				<div class="col-lg-4 col-md-6 mb-2 d-flex align-items-stretch">
+					<div class="icon-box">
+						<div class="icon">
+							<i class="{{item.class}}"></i>
+						</div>
+						<h4>
+							<a href="">{{item.denomination|capitalize}}</a>
+						</h4>
+						<p>{{item.description}}</p>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 		
 

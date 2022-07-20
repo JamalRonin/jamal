@@ -17,7 +17,7 @@ class AppFixtures extends Fixture
         $siteVitrine->setDescriptionDeux('suivis durant 12 mois');
         $siteVitrine->setDescriptionTrois('évolutif');
         $siteVitrine->setDescriptionQuatre('documenter');
-        $siteVitrine->setDescriptionCinq('Propriétaire complètement sur votre boutique');
+        $siteVitrine->setDescriptionCinq('Propriétaire de votre site');
         $siteVitrine->setDescriptionSix(' Notifications de prise de contact par mail');
         $siteVitrine->setDescriptionSept('réponse aux clients automatique');
         $siteVitrine->setPrix('149 € sur 12 mois');
@@ -31,7 +31,7 @@ class AppFixtures extends Fixture
         $siteEcommerce->setDescriptionDeux('suivis durant 12 mois');
         $siteEcommerce->setDescriptionTrois('évolutif');
         $siteEcommerce->setDescriptionQuatre('documenter');
-        $siteEcommerce->setDescriptionCinq('Propriétaire complètement sur votre boutique');
+        $siteEcommerce->setDescriptionCinq('Propriétaire de votre site');
         $siteEcommerce->setDescriptionSix(' Notification de panier, notification de page abandonner et achat par mail. ');
         $siteEcommerce->setDescriptionSept('réponse aux clients automatique');
         $siteEcommerce->setPrix('339 € sur 12 mois');
