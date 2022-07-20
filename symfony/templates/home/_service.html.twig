@@ -30,21 +30,25 @@
 			<p>Plus qu'un metier</p>
 		</div>
 		<div class="row">
-			{# {% for item in services %} #}
+			{% for item in produit %}
 
 
 				<div class="col-lg-4 col-md-6 mb-2 d-flex align-items-stretch">
 					<div class="icon-box">
 						<div class="icon">
-							{# <i class="{{item.class}}"></i> #}
+							<i class="{{item.class}}"></i>
 						</div>
 						<h4>
-							{# <a href="">{{item.denomination|capitalize}}</a> #}
+							<a href="">{{item.nom|capitalize}}</a>
 						</h4>
-						{# <p>{{item.description}}</p> #}
+						<p>{{item.description}}</p>
+						<p>{{item.descriptionUne}}</p> 
+						<p>{{item.descriptionDeux}}</p>
+						 <p>{{item.descriptionTrois}}</p>
+
 					</div>
 				</div>
-			{# {% endfor %} #}
+			 {% endfor %}
 		</div>
 		
 
