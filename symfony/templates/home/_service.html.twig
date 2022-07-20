@@ -32,7 +32,6 @@
 		<div class="row">
 			{% for item in produit %}
 
-
 				<div class="col-lg-4 col-md-6 mb-2 d-flex align-items-stretch">
 					<div class="icon-box">
 						<div class="icon">
@@ -41,10 +40,46 @@
 						<h4>
 							<a href="">{{item.nom|capitalize}}</a>
 						</h4>
-						<p>{{item.description}}</p>
-						<p>{{item.descriptionUne}}</p> 
-						<p>{{item.descriptionDeux}}</p>
-						 <p>{{item.descriptionTrois}}</p>
+						<ul>
+						{# Si valeur est null alors ne pas afficher le li #}
+						
+							<li>{{item.description}}</li>
+							<li>{{item.prix}}</li>
+							{% if item.descriptionUne is empty %}
+							{% else %}
+							<li>{{item.descriptionUne}}</li>
+
+							{% endif %}
+							{% if item.descriptionDeux is empty %}
+							{% else %}
+								
+							<li>{{item.descriptionDeux}}</li>
+							{% endif %}
+							{% if item.descriptionTrois is empty %}
+							{% else %}
+							<li>{{item.descriptionTrois}}</li>
+							{% endif %}
+							{% if item.descriptionQuatre is empty %}
+							{% else %}
+							<li>{{item.descriptionQuatre}}</li>
+							{% endif %}
+							{% if item.descriptionCinq is empty %}
+							{% else %}
+							<li>{{item.descriptionCinq}}</li>
+							{% endif %}
+							{% if item.descriptionSix is empty %}
+							{% else %}
+							<li>{{item.descriptionSix}}</li>
+							{% endif %}
+							{% if item.descriptionSept is empty %}
+							{% else %}
+							<li>{{item.descriptionSept}}</li>
+							{% endif %}
+							{% if item.descriptionHuit is empty %}
+							{% else %}
+							<li>{{item.descriptionHuit}}</li>
+							{% endif %}
+						</ul>
 
 					</div>
 				</div>
