@@ -60,8 +60,6 @@ class HomeController extends AbstractController
         $services = $servicesRepositoy->findAll();
         $portfolio = $portfolioRepository->findAll();
         $produit = $produitRepository->findAll();
-        dump($produit);
-        dump($nav);
 
         return $this->render('home/index.html.twig', [
             'about' => $about,
